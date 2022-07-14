@@ -1,0 +1,35 @@
+{"foodItem":[
+	{ 
+	  	"displayName":"Basil", 
+	  	"foodItemUid":1,
+	  	"foodTypeUid":1, 
+	  	//"aromaUid":"0001",
+	  	"chemicalCompoundArrayUid":[1,2,3,4,5]
+	},
+	{
+		"displayName":"Bay",
+		"foodItemUid":2,
+		"foodTypeUid":1,
+		"chemicalCompoundArrayUid":[1,2,3,5,6]
+	}
+]}
+
+{"chemicalCompound":[
+  { "chemicalCompoundUid":1, "displayName":"Cineole", "aroma": "Eucalyptus", "flavourFamilyUid": 1, "structure":"C10H18O", "alternativeName":"Eucalyptol"},
+  { "chemicalCompoundUid":2, "displayName":"Linalool", "aroma": "Lily of the valley", "flavourFamilyUid": 1, "structure":null, "alternativeName":null},
+  { "chemicalCompoundUid":3, "displayName":"Methyleugenol", "aroma": null, "flavourFamilyUid": null, "structure":null, "alternativeName":null},
+  { "chemicalCompoundUid":4, "displayName":"Estragole", "aroma": "Tarragon", "flavourFamilyUid": 2, "structure":null, "alternativeName":null },
+  { "chemicalCompoundUid":5, "displayName":"Eugenol", "aroma": "Clove", "flavourFamilyUid": 2, "structure":null, "alternativeName":null},
+  { "chemicalCompoundUid":6, "displayName":"Pinene", "aroma": "Pine", "flavourFamilyUid": 1, "structure":"C10H16", "alternativeName":null}
+]}
+
+{"foodItemType":[
+  { "foodTypeUid":1, "displayName":"Herb" },
+  { "foodTypeUid":2, "displayName":"Spice" }
+]}
+
+{"flavourFamily":[
+  { "flavourFamilyUid":1, "displayName":"Terpenes" },
+  { "flavourFamilyUid":2, "displayName":"Phenolics" },
+  { "flavourFamilyUid":3, "displayName":"Pungent" },
+]}
