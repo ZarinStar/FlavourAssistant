@@ -1,0 +1,7 @@
+Origins of data files
+
+Compound.json - https://foodb.ca/downloads
+CompoundAlternateParent.json - https://foodb.ca/downloads
+CompoundsFlavor.json - https://foodb.ca/downloads
+Flavor.json - https://foodb.ca/downloads
+Food.json - https://foodb.ca/downloads
