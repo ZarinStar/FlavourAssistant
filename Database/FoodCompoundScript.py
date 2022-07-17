@@ -2,25 +2,31 @@
 
 import pandas as pd
 import json
+import csv
 
 compoundFile = "Compound.json"
 foodFile = "Food.json"
+csvFile = "FoodMatrix.csv"
 
 columnList = []
-compoundData = []
-#for line in open('tweets.json', 'r'):
-#    tweets.append(json.loads(line))
+columnList.append("") #blank for first columm
+compoundDict = []
 
-#step 1:
-#Create columns based on the "name" variable (or the "id" variable) from Compound.json in a new csv file.
+#step 1: Create columns based on the "name" variable (or the "id" variable) from Compound.json in a new csv file.
 for line in open(compoundFile, 'r'):
-	#data = json.load(f)
-	compoundData.append(json.loads(line)) #processes every json object as string, not ideal
-	#for i in compoundData['id']:
-	#	columnList.append(i)
+	compoundDict.append(json.loads(line)) #processes every json object as dict
 
-print(compoundData[0])#test
-#print(columnList[0]) #test
+for i in range(len(compoundDict)):
+	key = compoundDict[i]
+	value = key.get("id")
+	validate = key.get("klass") #"klass":"Flavonoids"
+	if validate == "Flavonoids":
+		columnList.append(value) #we only care about compounds in the Flavonoids klass
 
-#step 2: 
-#Create rows based on the "name" variable (or the "id" variable) from Food.json.
+# open the file in the write mode for the column headers (first row)
+f = open(csvFile, 'w')
+writer = csv.writer(f)
+writer.writerow(columnList)
+f.close()
+
+#step 2: Create rows based on the "name" variable (or the "id" variable) from Food.json.
